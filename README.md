@@ -97,7 +97,7 @@ To make your life convenient there is a couple of additional commands in the
 
 ### Loading layered .envrc
 
-Lets say you have the following `.envrc`s
+Lets say you have the following structure:
 
 - `/a/.envrc`
 - `/a/b/.envrc`
