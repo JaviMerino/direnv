@@ -1,5 +1,4 @@
-Manage your rubies with direnv and ruby-install
-###############################################
+# Manage your rubies with direnv and ruby-install
 
 direnv is just a shell extension that manages your environment variables
 depending on the folder you live in. In this article we will explore how it
@@ -7,8 +6,7 @@ can be used in combination with
 [ruby-install](https://github.com/postmodern/ruby-install) to manage and
 select the version of ruby that you want to use in a project.
 
-The setup
----------
+## The setup
 
 First install direnv. This is the quick version on OSX + Bash:
 
@@ -58,8 +56,7 @@ That's it. Now in any project you can run `direnv edit .` and add
 `use ruby 1.9.3` or `use ruby 2.0` in the file like you want and direnv will
 select the right ruby version when you enter the project's folder.
 
-A bit of explanation
---------------------
+## A bit of explanation
 
 The last part probably needs a bit more explanation. We make use of a couple
 of commands that are part of the [stdlib](/stdlib.html) which is availabe in
@@ -82,8 +79,7 @@ shims into the .direnv/bin folder which allows you to invoke the commands
 directly instead of prefixing your ruby programs with `bundle exec` all the
 time.
 
-Conclusion
-----------
+## Conclusion
 
 As you see this approach is not restricted to ruby. You could have various
 versions of python installed under ~/.pythons and a `use_python` defined in
