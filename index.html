@@ -30,7 +30,14 @@
   <div id="error"></div>
 
   <script>
-    // essential settings
+  // z - Dynamic code highlight hack
+  old_create_page_anchors = create_page_anchors
+  create_page_anchors = function() {
+    old_create_page_anchors()
+    $("#content pre code").each(function(i, e) {hljs.highlightBlock(e)});
+  }
+
+  // essential settings
   ditto.index = "README.md";
   ditto.sidebar_file = "docs/sidebar.md";
 
@@ -43,8 +50,6 @@
 
   // run
   ditto.run();
-
-  hljs.initHighlightingOnLoad();
   </script>
 </body>
 </html>
